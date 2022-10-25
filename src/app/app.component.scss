@@ -1,0 +1,17 @@
+.main{
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    min-height: 100vh;
+
+    background-color: whitesmoke;
+}
+
+.wrapper{
+    flex-grow: 1;
+}
+
+.wrapper__header{
+    height: 60vh;
+}

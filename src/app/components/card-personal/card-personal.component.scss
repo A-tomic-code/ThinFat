@@ -1,0 +1,33 @@
+.component{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 300px;
+    height: 450px;
+
+    border: 1px solid black;
+    background: white;
+
+    padding: 1rem;
+
+    overflow: scroll;
+
+    box-shadow: 5px 5px 0px black;
+}
+
+.relleno{
+    width: 100%;
+    aspect-ratio: 13/9;
+    background: var(--background-color);
+}
+.card-content p, .card-title p{
+    color:black
+}
+.card-title p{
+    font-size: 2rem;
+}
+
+.card-content p{
+    font-size: 1rem;
+}

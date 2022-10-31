@@ -1,5 +1,4 @@
 .page{
-    background-color: var(--background-color);
     min-height: 100%;
 }
 
@@ -15,20 +14,28 @@
     min-height: 100%;
 }
 
-.logo, .info{
+.image, .info{
     display: flex;
 
     padding: 2rem;
 }
 
-.logo {
-    width: 30%
-}.info {
+.image {
+    width: 40%
+}.image img{
+    width: 100%;
+    height: 80%;
+}
+
+.info {
     flex-direction: column;
     justify-content: space-around;
     gap: 2rem;
 
-    width: 70%
+    width: 60%
+}
+.wrapper:nth-child(even){
+    flex-direction: row-reverse;
 }
 
 .btn{

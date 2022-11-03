@@ -1,15 +1,23 @@
 <div class="component">
 
-    <div class="card-img">
-        <div class="relleno"></div>
-    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
 
-    <div class="card-title">
-        <p class="txt-title">Nombre</p>
-    </div>
+          <div class="col-md-4">
+            <img src="../../../assets/img/header.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
 
-    <div class="card-content">
-        <p class="txt-gral txt-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat laborum esse repudiandae nobis molestias laudantium magnam recusandae dolorum veniam corporis, doloremque iure 
-            ullam rerum deleniti consequuntur blanditiis nisi error voluptate.</p>
-    </div>
+            <div class="col-md-8">
+
+              <div class="card-body">
+                <h5 class="card-title">{{data.name}}</h5>
+                <p class="card-text">{{data.description}}</p>
+                <p class="card-text" (click)="like()"><small class="text-muted"> <i class="bi bi-heart likebtn"></i> {{data.likes}}</small></p>
+              </div>
+
+            </div>
+
+          </div>
+      </div>
+
 </div>

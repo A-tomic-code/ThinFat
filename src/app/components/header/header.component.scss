@@ -14,9 +14,19 @@
     justify-content: center;
     align-items: center;
 
-    background: url(../../../assets/img/header.jpg);
-    // background-size: cover;
+    background: black;
+    background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
+    background-repeat: no-repeat
 
+}
+.background img{
+    height: 100%;
+}
+
+.navbar{
+    transform: scale(1.2);
+}
+.carousel{
+    max-width: 50%;
 }

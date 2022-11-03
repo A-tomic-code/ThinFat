@@ -1,7 +1,13 @@
+.page{
+    padding: 1rem;
+}
 .cards-wrapper{
     display: flex;
     justify-content: space-around;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+
+    padding: 1rem;
+
 }

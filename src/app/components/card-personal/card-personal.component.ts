@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Professional } from 'src/app/models/professional';
 
 @Component({
   selector: 'app-card-personal',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardPersonalComponent implements OnInit {
 
+  @Input() data:Professional = new Professional();
+
   constructor() { }
+
+  like(){
+    this.data.like();
+  }
 
   ngOnInit(): void {
   }

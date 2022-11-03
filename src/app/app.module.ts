@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardPersonalComponent } from './components/card-personal/card-personal.component';
 import { CardPostComponent } from './components/card-post/card-post.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavbarComponent,
     HeaderComponent,
     CardPersonalComponent,
-    CardPostComponent
+    CardPostComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,

@@ -35,7 +35,10 @@
     width: 60%
 }
 .wrapper:nth-child(even){
-    flex-direction: rowgit-reverse;
+    flex-direction: row-reverse;
+}.wrapper:nth-child(even) .info .btn{
+    align-self: flex-start;
+
 }
 
 .btn{

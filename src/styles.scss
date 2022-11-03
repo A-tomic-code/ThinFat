@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Rosario&family=Titillium+Web:ital,wght@0,200;1,200&display=swap');
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
 :root{
     --background-color: #a0a0a0
 }
@@ -48,3 +50,5 @@ html{
     border:none;
     border-radius: 5px;
 }
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

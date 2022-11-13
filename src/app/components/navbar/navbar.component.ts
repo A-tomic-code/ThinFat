@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) { }
   name = 'Angular';
   public isCollapsed = true;
+  
   navigate(where:string){
     this.router.navigateByUrl(where)
   }

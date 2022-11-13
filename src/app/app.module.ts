@@ -21,6 +21,8 @@ import { SecretComponent } from './pages/secret/secret.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SecretFormComponent } from './components/secret-form/secret-form.component';
 import { SecretPanelComponent } from './components/secret-panel/secret-panel.component';
+import { BlogMenuComponent } from './components/blog-menu/blog-menu.component';
+import { PostComponent } from './pages/post/post.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { SecretPanelComponent } from './components/secret-panel/secret-panel.com
     SecretComponent,
     SecretFormComponent,
     SecretPanelComponent,
+    BlogMenuComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,

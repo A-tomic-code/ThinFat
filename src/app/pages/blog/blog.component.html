@@ -1,25 +1,23 @@
 <div class="page">
     
     <div class="wrapper">
+        
+        <section class="blog-menu">
+            <app-blog-menu></app-blog-menu>
+        </section>
 
-        <div class="blog-nav"></div>
         <section class="cards-container">
 
+            <article class="card-wrapper" *ngFor="let post of posts">
+                <app-card-post [post]="post"></app-card-post>
+            </article>    
+
 
             <article class="card-wrapper" *ngFor="let post of posts">
                 <app-card-post [post]="post"></app-card-post>
-            </article>
+            </article>    
 
-
-            <article class="card-wrapper" *ngFor="let post of posts">
-                <app-card-post [post]="post"></app-card-post>
-            </article>
-                
-                
-                
-
-
-        </section>
+        </section>    
 
     </div>
 

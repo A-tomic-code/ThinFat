@@ -1,8 +1,8 @@
 .wrapper{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
     gap: 1rem;
 
@@ -10,23 +10,28 @@
     height: 100%;
 }
 
-.blog-nav{
-    width: 15%;
-    height: 500px;
+.blog-menu{
+    width: 30%;
 
-    background: #cfcfcf;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    padding: 1%;
 }
 
 .cards-container{
     display: flex;
     justify-content: space-around;
-    align-content: space-around;
+    align-content: flex-start;
     flex-wrap: wrap;
 
     gap:10px;
 
-    width: 85%;
+    width: 100%;
     min-height: 100vh;
+
+    padding: 1%;
 
 }
 
@@ -40,10 +45,4 @@
     height: 500px;
     
     background: red;
-}
-
-@media screen and (max-width:600px ){
-    .cards-container{
-        flex-direction: column;
-    }
 }

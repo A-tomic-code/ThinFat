@@ -1,0 +1,13 @@
+.card-img-top{
+    aspect-ratio: 16/12 !important;
+    object-fit: cover;
+}
+
+.card{
+    box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
+}
+
+input{
+    outline: none;
+    border: 1px solid black;
+}

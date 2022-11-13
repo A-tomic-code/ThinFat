@@ -3,13 +3,23 @@
     <div class="wrapper">
 
         <div class="blog-nav"></div>
+        <section class="cards-container">
 
-        <div class="cards-container">
-            
-            <div class="relleno"></div>
-            <div class="relleno"></div>
 
-        </div>
+            <article class="card-wrapper" *ngFor="let post of posts">
+                <app-card-post [post]="post"></app-card-post>
+            </article>
+
+
+            <article class="card-wrapper" *ngFor="let post of posts">
+                <app-card-post [post]="post"></app-card-post>
+            </article>
+                
+                
+                
+
+
+        </section>
 
     </div>
 

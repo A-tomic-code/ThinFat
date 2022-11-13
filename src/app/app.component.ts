@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos'
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

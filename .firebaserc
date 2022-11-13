@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tattothinfat": {
+      "hosting": {
+        "thinfat": [
+          "tattothinfat"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tattothinfat"
+  }
+}

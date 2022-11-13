@@ -30,7 +30,6 @@
             "styles": [
               "src/styles.scss",
               "./node_modules/aos/dist/aos.css"
-
             ],
             "scripts": [
               "./node_modules/aos/dist/aos.js"
@@ -103,6 +102,16 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "thinfat:build:production",
+            "firebaseProject": "tattothinfat",
+            "firebaseHostingSite": "tattothinfat"
           }
         }
       }

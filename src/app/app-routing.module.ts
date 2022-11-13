@@ -4,12 +4,14 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NuestroTrabajoComponent } from './pages/nuestro-trabajo/nuestro-trabajo.component';
 import { PersonalComponent } from './pages/personal/personal.component';
+import { SecretComponent } from './pages/secret/secret.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'equipo', component: PersonalComponent },
   { path: 'nuestro-trabajo', component: NuestroTrabajoComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'secret', component: SecretComponent },
 ];
 
 @NgModule({

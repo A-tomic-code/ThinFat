@@ -20,6 +20,9 @@
 }
 
 .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 40%
 }.image img{
     width: 100%;
@@ -49,3 +52,12 @@
 
 }
 
+@media screen and (max-width: 900px) {
+    .image, .image img{
+        display: none;
+    }
+    
+    .info{
+        width: 100%;
+    }
+}

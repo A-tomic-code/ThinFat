@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from 'src/app/models/post';
-
+import { Post } from 'src/app/models/post.interface';
 
 @Component({
   selector: 'app-card-post',
@@ -9,7 +8,13 @@ import { Post } from 'src/app/models/post';
 })
 export class CardPostComponent implements OnInit {
 
-  @Input() post:Post = new Post();
+  @Input() post:Post = {
+    title: '',
+    description: '',
+    date: '',
+    comments: [''],
+    likes: 0,
+  };
 
   constructor() { }
 

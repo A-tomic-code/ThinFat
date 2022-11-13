@@ -22,7 +22,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SecretFormComponent } from './components/secret-form/secret-form.component';
 import { SecretPanelComponent } from './components/secret-panel/secret-panel.component';
 import { BlogMenuComponent } from './components/blog-menu/blog-menu.component';
-import { PostComponent } from './pages/post/post.component';
+import { PostComponent } from './pages/post/posts.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { postsReducer } from './state/reducers/post.reducer';
+import { ROOT_REDUCER } from './app.state';
+import { EffectsModule } from '@ngrx/effects';
+import { PostsEffects } from './state/effects/posts.effects';
 
 @NgModule({
   declarations: [
@@ -41,7 +47,7 @@ import { PostComponent } from './pages/post/post.component';
     SecretFormComponent,
     SecretPanelComponent,
     BlogMenuComponent,
-    PostComponent,
+    PostComponent ,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +58,11 @@ import { PostComponent } from './pages/post/post.component';
     ReactiveFormsModule,
     FormsModule,
     NgbCollapseModule,
+    StoreModule.forRoot(ROOT_REDUCER),
+    StoreDevtoolsModule.instrument({ name:'TEST' }),
+    EffectsModule.forRoot([
+      PostsEffects
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]

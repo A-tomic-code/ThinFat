@@ -8,7 +8,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       
-        <div class="collapse navbar-collapse justify-content-center" id="navbarColor03" [ngbCollapse]="isCollapsed">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarColor03" [ngbCollapse]="isCollapsed">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" (click)="navigate('/')">Home</a>
@@ -24,10 +24,13 @@
             </li>
           </ul>
 
-          <form class="d-flex my-2 my-lg-0 ">
-            <input class="form-control form-control-sm mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-dark btn-sm my-2 my-sm-0" type="submit">Buscar</button>
-          </form>
+          <div class="d-flex justify-content-end" style="width: 45%">
+
+            <form class="d-flex my-2 my-lg-0 gap-1">
+              <input class="form-control form-control-sm mr-sm-2" type="text" placeholder="Tu nombre" style="width: auto;">
+              <button class="btn btn-dark btn-sm my-2 my-sm-0" type="submit" >Pedir una cita</button>
+            </form>
+          </div>
 
         </div>
       </nav>

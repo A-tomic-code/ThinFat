@@ -16,3 +16,20 @@
 .wrapper__header{
     height: 60vh;
 }
+
+.floating-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    width: 30%;
+    height: 10%;
+
+    border: 2px solid blue
+}
+.zindex-top{
+    z-index: 2000;
+}

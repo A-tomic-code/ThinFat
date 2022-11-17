@@ -30,6 +30,9 @@ import { ROOT_REDUCER } from './app.state';
 import { EffectsModule } from '@ngrx/effects';
 import { PostsEffects } from './state/effects/posts.effects';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +66,8 @@ import { PostsEffects } from './state/effects/posts.effects';
     EffectsModule.forRoot([
       PostsEffects
     ]),
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

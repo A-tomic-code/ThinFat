@@ -1,0 +1,36 @@
+<div class="component floating-button">
+
+    <div class="menu card" *ngIf="expanded">
+        <p class="card-title">
+            hola
+        </p>
+        
+        <p class="card-title">
+            Soy un chat
+        </p>
+        
+        <div class="form-wrapper">
+ 
+            <div class="chat-input">
+                <input type="text">
+            </div>
+ 
+            <div class="vhat-button">
+                <button class="btn btn-dark btn-sm">
+                    Enviar
+                </button>
+            </div>
+
+        </div>
+    </div> 
+
+    <button
+        type="button"
+        class="h-15 btn btn-dark rounded-5 d-flex justify-content-around align-items-center gap-1 h-75 w-75 fs-3 fs-"
+        (click)="toggleMenu()"
+    >
+      <i class="bi bi-whatsapp"></i>
+      <p class="m-0">Pide informacion</p>
+    </button>
+
+  </div>

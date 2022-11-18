@@ -15,32 +15,13 @@ import { VirtualTimeScheduler } from 'rxjs';
 })
 export class AppComponent implements OnInit{
   title = 'thinfat';
-  socket: WebSocket | null = null;
 
   constructor(private chatService : ChatService) {
     
   }
 
-  
-
   ngOnInit(){
     AOS.init();
-    this.chatService.getSocket()
-      ? this.socket = this.chatService.getSocket()
-      : this.socket = this.chatService.connect();
 
-    this.socket ? this.initSocket(this.socket) : null;
   }
-
-  initSocket(socket:WebSocket){
-    socket.onopen = () => {
-      alert('Conectado webaockets')
-    }
-
-    socket.onmessage = (event) => {
-      console.log(event.data)
-    }
-  }
-
-  
 }

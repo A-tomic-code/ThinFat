@@ -1,0 +1,22 @@
+<div class="component zindex-top">
+    <div class="floating-button">
+        
+        <div class="display card" *ngIf="expanded" #display>
+            <div class="message-wrapper">
+                <p *ngFor="let message of conversation">{{message.content}}</p>
+            </div>
+
+            <form class="chat-form">
+                <input type="text">
+                <button class="btn btn-dark">Enviar</button>
+            </form>
+        </div>
+
+        <button type="button" class="btn btn-dark rounded-5 d-flex justify-content-around align-items-center gap-1 h-75 w-75 fs-3"
+            (click)="toggleDisplay()">
+          <i class="bi bi-whatsapp"></i>
+          <p class="m-0">Pide informacion</p>
+        </button>
+    
+      </div>
+</div>

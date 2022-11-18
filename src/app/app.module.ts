@@ -31,6 +31,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { PostsEffects } from './state/effects/posts.effects';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     SecretFormComponent,
     SecretPanelComponent,
     BlogMenuComponent,
-    PostComponent ,
+    PostComponent,
+    FloatingButtonComponent ,
   ],
   imports: [
     BrowserModule,

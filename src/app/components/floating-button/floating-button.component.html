@@ -1,19 +1,34 @@
-<div class="component zindex-top">
+<div class="component zindex-top shadow">
     <div class="floating-button">
         
         <div class="display card" *ngIf="expanded" #display>
-            <div class="message-wrapper">
-                <p *ngFor="let message of conversation">{{message.content}}</p>
+            <div class="chat-header">
+                <p>ThinFat Help !</p>
+                <i class="bi bi-x-octagon-fill close-button" (click)="toggleDisplay()"></i>
             </div>
 
-            <form class="chat-form">
-                <input type="text">
+            <div class="message-wrapper">
+                <div *ngFor="let message of conversation"
+                    [ngClass]="message.from == 'thinfat' ? 'left-align' : 'right-align'">
+                    
+                    <p class="message"
+                        [ngClass]="message.from == 'thinfat' ? 'incoming-message' : 'outgoing-message'">
+
+                        {{message.content}}
+                    </p>
+
+                </div>
+            </div>
+
+            <form class="chat-form" #chatForm="ngForm" (ngSubmit)="onSubmit()">
+                <input type="text" [(ngModel)]="message" name="message" #messageInput="ngModel">
                 <button class="btn btn-dark">Enviar</button>
             </form>
         </div>
 
         <button type="button" class="btn btn-dark rounded-5 d-flex justify-content-around align-items-center gap-1 h-75 w-75 fs-3"
-            (click)="toggleDisplay()">
+            (click)="toggleDisplay()"
+            *ngIf="!expanded">
           <i class="bi bi-whatsapp"></i>
           <p class="m-0">Pide informacion</p>
         </button>

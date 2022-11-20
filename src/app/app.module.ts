@@ -31,6 +31,14 @@ import { EffectsModule } from '@ngrx/effects';
 import { PostsEffects } from './state/effects/posts.effects';
 import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +57,7 @@ import { FloatingButtonComponent } from './components/floating-button/floating-b
     SecretPanelComponent,
     BlogMenuComponent,
     PostComponent,
-    FloatingButtonComponent,
+    FloatingButtonComponent ,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +73,8 @@ import { FloatingButtonComponent } from './components/floating-button/floating-b
     EffectsModule.forRoot([
       PostsEffects
     ]),
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

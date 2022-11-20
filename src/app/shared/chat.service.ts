@@ -19,9 +19,7 @@ export class ChatService {
     console.log(`Enviando --> ${msg}`)
     const message = {
       type: 'message',
-      content: msg,
-      from: this.config.id,
-      to: 'thinfat'
+      content: msg
     }
 
     const messageObj = JSON.stringify(message)

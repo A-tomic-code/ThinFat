@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ChatMessage } from 'src/app/models/chat-message';
+import { ChatService } from 'src/app/shared/chat.service';
 
 @Component({
   selector: 'app-floating-button',
@@ -6,16 +8,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./floating-button.component.scss']
 })
 export class FloatingButtonComponent implements OnInit {
+  expanded = false;
 
-  expanded: boolean = false;
+  socket: WebSocket | null = null;
+  conversation : ChatMessage[] = [];
 
-  constructor() { }
+  message: string = '';
+  socketConfig: any = {};
 
-  ngOnInit(): void {
-  }
 
-  toggleMenu(){
+  constructor(private chatService: ChatService) { }
+
+  toggleDisplay(){
     this.expanded ? this.expanded = false : this.expanded = true;
   }
 
+  sendMessage(msg:string){
+    this.chatService.sendMessage(msg)
+  }
+
+  onSubmit(){
+    this.sendMessage(this.message);
+    this.message = '';
+  }
+  ngOnInit(): void {
+    this.socket = this.chatService.getSocket();
+    this.conversation = this.chatService.getConversation()
+  }
+
 }
+

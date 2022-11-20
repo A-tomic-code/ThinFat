@@ -30,13 +30,8 @@ import { ROOT_REDUCER } from './app.state';
 import { EffectsModule } from '@ngrx/effects';
 import { PostsEffects } from './state/effects/posts.effects';
 import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
-
 import { HttpClientModule } from '@angular/common/http';
-import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 
-
-import { HttpClientModule } from '@angular/common/http';
-import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 
 
 @NgModule({

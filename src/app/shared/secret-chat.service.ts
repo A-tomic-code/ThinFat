@@ -1,15 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { from, Observable, of, Subject } from 'rxjs';
 import { ChatMessage } from '../models/chat-message';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ChatService {
+export class SecretChatService {
 
   url:string = 'ws://localhost:8095'
   socket:WebSocket | null = null;
   conversation : ChatMessage[] = [];
+  clients_subject = new Subject<string[]>;
+  chatList$ = this.clients_subject.asObservable();
   config : any = {};
 
   constructor(private http: HttpClient) {
@@ -54,7 +57,9 @@ export class ChatService {
 
   private initSocket(socket:WebSocket){
     socket.onopen = () => {
-      console.log('Conectado websockets');
+      console.log('Conectado websockets secretmode');
+
+      
     }
 
     socket.onmessage = (event) => {
@@ -70,6 +75,7 @@ export class ChatService {
           this.conversation.push(message);
           console.log('Recibido --> ', message);
           break;
+          
         case 'config':
 
           for (const key in msg){
@@ -80,8 +86,18 @@ export class ChatService {
 
           }
 
-          console.log('New config --> ', this.config);
-          break;   
+          if(this.config.id != 'thinfat'){
+            const config = {type: 'request-admin', from: this.config.id}
+            socket.send( JSON.stringify(config) )
+          }
+
+          console.log('(secret) New config --> ', this.config);
+          break; 
+          
+        case 'client-list-change':
+          const chatList = JSON.parse(msg.list);
+          this.clients_subject.next(chatList);
+          break;
       };
 
       // if(event.data[0] === '{'){

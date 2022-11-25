@@ -34,6 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { SecretBlogComponent } from './components/secret-blog/secret-blog.component';
 import { SecretPersonalComponent } from './components/secret-personal/secret-personal.component';
 import { SecretTrabajoComponent } from './components/secret-trabajo/secret-trabajo.component';
+import { NuevaEntradaComponent } from './components/nueva-entrada/nueva-entrada.component';
+import { EditarEntradaComponent } from './components/editar-entrada/editar-entrada.component';
+import { EliminarEntradaComponent } from './components/eliminar-entrada/eliminar-entrada.component';
 
 
 @NgModule({
@@ -56,7 +59,10 @@ import { SecretTrabajoComponent } from './components/secret-trabajo/secret-traba
     PostComponent,
     SecretBlogComponent,
     SecretPersonalComponent,
-    SecretTrabajoComponent ,
+    SecretTrabajoComponent,
+    NuevaEntradaComponent,
+    EditarEntradaComponent,
+    EliminarEntradaComponent ,
   ],
   imports: [
     BrowserModule,

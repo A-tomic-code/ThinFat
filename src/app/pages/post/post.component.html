@@ -1,3 +1,51 @@
 <div class="page py-5">
-    {{id}}
+    <div class="component">
+        <div class="card shadow">
+          <img
+            src="../../../assets/img/header.jpg"
+            class="card-img-top"
+            style="aspect-ratio: 16/9; height: 500px; object-fit: contain;"
+            alt="..."
+          />
+          <div class="card-body gap-2">
+            <h1 class="card-title">{{ post.title }}</h1>
+            <p class="card-text">
+              {{post.description}}
+            </p>
+            <p class="text-muted">
+              {{post.date}} - {{ post.likes }} likes - {{post.comments ? post.comments.length : 0}} Comentarios
+              </p>
+      
+            <div class="btn-group d-flex justify-content-between gap-3">
+              
+              <!-- <button class="btn btn-outline-dark btn-sm">
+                <i class="bi bi-heart"></i>
+              </button> -->
+            </div>
+      
+            <ul class="list-group list-group-flush" style="height: 100px;">
+              <li class="list-group-item" *ngIf="!post.comments || post.comments.length <= 0">* No hay comentarios *</li>
+              <li class="list-group-item" *ngFor="let comment of post.comments">{{comment}}</li>
+            </ul>
+      
+            <form class="cmt-2" >
+              <div class="row">
+                <div class="col-3">
+                  <input type="text" class="form-control form-control-sm" placeholder="Nombre">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control form-control-sm" placeholder="Comentario">
+                </div>
+                <div class="col-1 d-flex">
+                  <button class="btn btn-outline-dark btn-sm align-self-end">
+                      <i class="bi bi-chat-dots"></i>
+                    </button>
+                </div>
+              </div>
+            </form>
+      
+          </div>
+        </div>
+      </div>
+      
 </div>

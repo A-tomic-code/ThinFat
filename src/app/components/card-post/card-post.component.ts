@@ -9,6 +9,7 @@ import { Post } from 'src/app/models/post.interface';
 export class CardPostComponent implements OnInit {
 
   @Input() post:Post = {
+    id: 'noid',
     title: '',
     description: '',
     date: '',
@@ -17,6 +18,10 @@ export class CardPostComponent implements OnInit {
   };
 
   constructor() { }
+
+  log(post:any){
+    console.log(post)
+  }
 
   ngOnInit(): void {
   }

@@ -31,6 +31,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { PostsEffects } from './state/effects/posts.effects';
 
 import { HttpClientModule } from '@angular/common/http';
+import { SecretBlogComponent } from './components/secret-blog/secret-blog.component';
+import { SecretPersonalComponent } from './components/secret-personal/secret-personal.component';
+import { SecretTrabajoComponent } from './components/secret-trabajo/secret-trabajo.component';
 
 
 @NgModule({
@@ -50,7 +53,10 @@ import { HttpClientModule } from '@angular/common/http';
     SecretFormComponent,
     SecretPanelComponent,
     BlogMenuComponent,
-    PostComponent ,
+    PostComponent,
+    SecretBlogComponent,
+    SecretPersonalComponent,
+    SecretTrabajoComponent ,
   ],
   imports: [
     BrowserModule,

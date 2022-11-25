@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecretPanelComponent implements OnInit {
 
+  selectedOption: string = '';
+
   constructor() { }
+
+  selectOption(opt:string){
+    this.selectedOption = opt;
+  }
 
   ngOnInit(): void {
   }

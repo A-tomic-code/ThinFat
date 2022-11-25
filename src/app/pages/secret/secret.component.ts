@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SecretComponent implements OnInit {
   
   constructor() { }
-  logged: boolean = false;
+  logged: boolean = true;
   
   secrets = {
     user: 'sara',

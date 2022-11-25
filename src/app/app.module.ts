@@ -29,8 +29,9 @@ import { postsReducer } from './state/reducers/post.reducer';
 import { ROOT_REDUCER } from './app.state';
 import { EffectsModule } from '@ngrx/effects';
 import { PostsEffects } from './state/effects/posts.effects';
-
+import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     SecretFormComponent,
     SecretPanelComponent,
     BlogMenuComponent,
-    PostComponent ,
+    PostComponent,
+    FloatingButtonComponent ,
   ],
   imports: [
     BrowserModule,
